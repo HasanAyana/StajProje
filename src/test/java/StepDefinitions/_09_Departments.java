@@ -2,18 +2,21 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
+import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class _09_Departments {
-    DialogContent dc=new DialogContent();
-    LeftNav lv=new LeftNav();
+    DialogContent dc = new DialogContent();
+    LeftNav lv = new LeftNav();
+
     @When("User add {string},{string} in Departments Categories")
     public void userAddInDepartmentsCategories(String name, String code) {
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput",name);
-        dc.findAndSend("codeInput",code);
+        dc.findAndSend("nameInput", name);
+        dc.findAndSend("codeInput", code);
         dc.findAndClick("saveButton");
     }
 
@@ -26,23 +29,25 @@ public class _09_Departments {
 
     @Then("already exists message should be displayed departments")
     public void alreadyExistsMessageShouldBeDisplayedDepartments() {
-        dc.findAndContainsText("existsMessage","There is already");
+        dc.findAndContainsText("existsMessage", "There is already");
     }
 
-    @When("User search {string} edit {string}departments")
-    public void userSearchEditDepartments(String name, String editName) {
-       /* try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }*/
+    @When("User edit {string}departments")
+    public void userSearchEditDepartments(String editName) {
+
+        lv.findAndClick("Dashboard");
+        lv.findAndClick("setupOne");
+        lv.findAndClick("schoolSetup");
+        lv.findAndClick("Departments");
+        Parent p = new Parent();
+        p.waitUntilLoading();
         dc.findAndClick("editButton");
-        dc.findAndSend("nameInput",editName);
+        dc.findAndSend("nameInput", editName);
         dc.findAndClick("saveButton");
     }
 
     @When("User delete the {string}departments")
     public void userDeleteTheDepartments(String name) {
-        dc.findAndDeleteGradeLevel(name);
+        dc.findAndDeleteDepartments(name);
     }
 }

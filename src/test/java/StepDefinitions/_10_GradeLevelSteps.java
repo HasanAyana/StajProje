@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,4 +31,19 @@ public class _10_GradeLevelSteps {
         dc.findAndClick("saveButton");
     }
 
+    @When("User edit {string} Grade Level")
+    public void userEditGradeLevel(String editName) {
+        lv.findAndClick("bankAccount");
+        lv.findAndClick("GradeLevels");
+        Parent p = new Parent();
+        p.waitUntilLoading();
+        dc.findAndClick("editButton");
+        dc.findAndSend("nameInput", editName);
+        dc.findAndClick("saveButton");
+    }
+
+    @When("User delete the {string}Grade level")
+    public void userDeleteTheGradeLevel(String name) {
+        dc.findAndDeleteGradeLevel(name);
+    }
 }

@@ -13,7 +13,7 @@ Feature: Departments Feature
     When User add "<name>","<code>" in Departments Categories
     Then already exists message should be displayed departments
 
-    When User search "<name>" edit "<EditName>"departments
+    When User edit "<EditName>"departments
     Then Success message should be displayed
 
     When User delete the "<EditName>"departments

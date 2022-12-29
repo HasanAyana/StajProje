@@ -25,6 +25,7 @@ public class Parent {
     }
 
     public void clickFunction(WebElement element) {
+
         waitUntilClickable(element);
         scrolltoElement(element);
         element.click();
