@@ -88,8 +88,7 @@ public class DialogContent extends Parent{
     private WebElement stageSelect;
     @FindBy(xpath = "//span[contains(text(),' Student Registration ')]") //hasan
     private WebElement stageStudentSelect;
-    @FindBy(xpath = "//span[contains(text(),' New Document')]") //hasan
-    private WebElement newDocument;
+
 
 
 
@@ -140,7 +139,6 @@ public class DialogContent extends Parent{
             case "editButton" : myElement=editButton;break;
             case "stageSelect": myElement = stageSelect;break; //hasan
             case "stageStudentSelect": myElement = stageStudentSelect;break; //hasan
-            case "newDocument": myElement = newDocument;break; //hasan
 
 
         }

@@ -6,7 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class GradeLevelSteps {
+public class _10_GradeLevelSteps {
     LeftNav lv=new LeftNav();
     DialogContent dc=new DialogContent();
     @Then("already exists message should be displayed Grade level")
