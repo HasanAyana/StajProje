@@ -6,7 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class _07_Departments {
+public class _09_Departments {
     DialogContent dc=new DialogContent();
     LeftNav lv=new LeftNav();
     @When("User add {string},{string} in Departments Categories")
