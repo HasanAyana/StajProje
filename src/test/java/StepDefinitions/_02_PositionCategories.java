@@ -37,8 +37,15 @@ public class _02_PositionCategories {
         dc.findAndClick("saveButton");
     }
 
-    @When("User delete the {string}")
-    public void userDeleteThe(String name) {
-        dc.findAndDelete(name);
+    @When("User edit {string} in Position Categories")
+    public void userEditInPositionCategories(String EditName) {
+        dc.findAndClick("editButton");
+        dc.findAndSend("nameInput",EditName);
+        dc.findAndClick("saveButton");
+    }
+
+    @When("User delete the {string} Position Categories")
+    public void userDeleteThePositionCategories(String EditName) {
+        dc.findAndDelete(EditName);
     }
 }
