@@ -79,7 +79,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-add-button['tooltip=GENERAL.BUTTON.ADD']//button")
     private WebElement addButton2;    //kamala
 
-    @FindBy(xpath = "//ms-edit-button[@table='true']/button")
+    @FindBy(xpath = "(//ms-edit-button[@table='true']/button)[1]")
     private WebElement editButton; // Ali edit button
     @FindBy(xpath = "//dynamic-view/div")
     private WebElement existsMessage; // existsMessage aynı isimi yeniden eklemek istediğimizde gözüken mesaj
@@ -166,19 +166,23 @@ public class DialogContent extends Parent{
 
     }
     public void findAndDeleteDepartments(String searchText) {
+        LeftNav lv=new LeftNav();
+        lv.findAndClick("Dashboard");
+        lv.findAndClick("setupOne");
+        lv.findAndClick("schoolSetup");
+        lv.findAndClick("Departments");
+        Parent p = new Parent();
+        p.waitUntilLoading();
         waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
         findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
         findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
 
     }  public void findAndDeleteGradeLevel(String searchText) {
-        WebElement tect=GWD.getDriver().findElement(By.xpath("//table[@role='table']"));
-        System.out.println("tect.getText() = " + tect.getText());
-       /* try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }*/
-        //waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
+        LeftNav lv=new LeftNav();
+        lv.findAndClick("bankAccount");
+        lv.findAndClick("GradeLevels");
+        Parent p = new Parent();
+        p.waitUntilLoading();
         findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
         findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
 

@@ -13,10 +13,10 @@ Feature: Departments Feature
     When User add "<name>","<shortName>","<order>" in Grade level  Categories
     Then already exists message should be displayed Grade level
 
-    When User search "<name>" edit "<EditName>"departments
+    When User edit "<EditName>" Grade Level
     Then Success message should be displayed
 
-    When User delete the "<EditName>"departments
+    When User delete the "<EditName>"Grade level
     Then Success message should be displayed
 
     Examples:
