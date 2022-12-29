@@ -26,7 +26,9 @@ public class _06_FieldsStep {
     }
 
     @And("Click on the element in the Dialog")
-    public void clickOnTheElementInTheDialog(DataTable element) {List<String> listelements = element.asList(String.class);
+    public void clickOnTheElementInTheDialog(DataTable element)
+    {
+        List<String> listelements = element.asList(String.class);
 
         for (String s : listelements) {
             dc.findAndClick(s);
