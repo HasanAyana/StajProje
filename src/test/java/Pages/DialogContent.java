@@ -88,6 +88,14 @@ public class DialogContent extends Parent{
     private WebElement stageSelect;
     @FindBy(xpath = "//span[contains(text(),' Student Registration ')]") //hasan
     private WebElement stageStudentSelect;
+    @FindBy(xpath = "//input[@data-placeholder='IBAN']") //hasan
+    private WebElement ibanInput;
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']") //hasan
+    private WebElement integrationCode;
+    @FindBy(xpath = "(//span[text()='Currency'])[3]") //hasan
+    private WebElement currency;
+    @FindBy(xpath = "//span[text()=' TRY ']") //hasan
+    private WebElement trySelect;
 
 
 
@@ -116,6 +124,8 @@ public class DialogContent extends Parent{
             case "shortNameInput" : myElement=shortNameInput;break;
             case "capasityInput" : myElement=capasityInput;break;
             case "orderInput" : myElement=orderInput;break;
+            case "ibanInput" : myElement=ibanInput;break;
+            case "integrationCode" : myElement=integrationCode;break;
 
 
         }
@@ -139,6 +149,8 @@ public class DialogContent extends Parent{
             case "editButton" : myElement=editButton;break;
             case "stageSelect": myElement = stageSelect;break; //hasan
             case "stageStudentSelect": myElement = stageStudentSelect;break; //hasan
+            case "currency": myElement = currency;break; //hasan
+            case "trySelect": myElement = trySelect;break; //hasan
 
 
         }
