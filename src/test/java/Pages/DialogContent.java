@@ -84,6 +84,13 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//dynamic-view/div")
     private WebElement existsMessage; // existsMessage aynı isimi yeniden eklemek istediğimizde gözüken mesaj
 
+    @FindBy(xpath = "(//div[contains(@class,'mat-select-value')])[3]") //hasan
+    private WebElement stageSelect;
+    @FindBy(xpath = "//span[contains(text(),' Student Registration ')]") //hasan
+    private WebElement stageStudentSelect;
+    @FindBy(xpath = "//span[contains(text(),' New Document')]") //hasan
+    private WebElement newDocument;
+
 
 
 // Deneme
@@ -131,6 +138,9 @@ public class DialogContent extends Parent{
             case "toggleBar" : myElement=toggleBar;break;
             case "addButton2" : myElement=addButton2;break;
             case "editButton" : myElement=editButton;break;
+            case "stageSelect": myElement = stageSelect;break; //hasan
+            case "stageStudentSelect": myElement = stageStudentSelect;break; //hasan
+            case "newDocument": myElement = newDocument;break; //hasan
 
 
         }

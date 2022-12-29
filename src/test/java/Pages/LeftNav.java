@@ -44,6 +44,8 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//*[text()='Departments']")  // Ali
     private WebElement Departments;
 
+    @FindBy(xpath = "//span[contains(text(),'Document Types')]") // hasan
+    private WebElement documentTypes;
 
 
 
@@ -66,6 +68,7 @@ public class LeftNav extends Parent{
             case "locations" : myElement=locations;break;
             case "Departments" : myElement=Departments;break;
             case "GradeLevels" : myElement=GradeLevels;break;
+            case "documentTypes" : myElement=documentTypes;break;
 
         }
         clickFunction(myElement);
