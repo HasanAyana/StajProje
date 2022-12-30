@@ -26,7 +26,7 @@ public class _04_SchoolSetupLocations {
     @When("User create new locaiton")
     public void userCreateNewLocaiton() {
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput","Amar");
+        dc.findAndSend("nameInput","Omer");
         dc.findAndSend("shortNameInput","boncuk");
         dc.findAndClick("locationsTypes");
         dc.findAndClick("otherTypes");
@@ -38,8 +38,8 @@ public class _04_SchoolSetupLocations {
     @When("User edit in School Setup Locations")
     public void userEditInSchoolSetupLocations() {
         dc.findAndClick("editButton");
-        dc.findAndSend("nameInput","1Amar");
-        dc.findAndSend("shortNameInput","1boncuk");
+        dc.findAndSend("nameInput","Omer2");
+        dc.findAndSend("shortNameInput","boncuk2");
         dc.findAndSend("capasityInput","2");
         dc.findAndClick("toggleBar");
         dc.findAndClick("saveButton");
@@ -47,8 +47,11 @@ public class _04_SchoolSetupLocations {
 
     @When("User delete School Setup Locations")
     public void userDeleteSchoolSetupLocations() {
-        dc.findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
+        dc.findAndClick("deleteButtonOmer"); // silme butonua bas, çöp kutusu
         parent.waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
         dc.findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
+        dc.findAndClick("deleteButtonOmer2");
+        parent.waitUntilLoading();
+        dc.findAndClick("deleteDialogButton");
     }
 }
