@@ -48,6 +48,14 @@ public class _09_Departments {
 
     @When("User delete the {string}departments")
     public void userDeleteTheDepartments(String name) {
-        dc.findAndDeleteDepartments(name);
+        lv.findAndClick("Dashboard");
+        lv.findAndClick("setupOne");
+        lv.findAndClick("schoolSetup");
+        lv.findAndClick("Departments");
+        Parent p = new Parent();
+        p.waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
+        dc.findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
+        dc.findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
+
     }
 }

@@ -6,6 +6,7 @@ Feature: Documant Types functionaliitiy
     Then User should login successfuly
 
   Scenario: Add Document Types and save
+
     And Click on the element in left nav
       | setupOne      |
       | parameters    |
@@ -23,6 +24,7 @@ Feature: Documant Types functionaliitiy
     And Success message should be displayed
 
   Scenario: Edit Document Types and save
+
     And Click on the element in left nav
       | setupOne      |
       | parameters    |

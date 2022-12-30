@@ -6,6 +6,7 @@ Feature: Bank Account functionaliitiy
     Then User should login successfuly
 
   Scenario: Add Bank Account and save
+
     And Click on the element in left nav
       | setupOne      |
       | parameters    |
@@ -21,7 +22,9 @@ Feature: Bank Account functionaliitiy
       | trySelect |
       | saveButton |
     And Success message should be displayed
+
   Scenario: Edit Bank Account and save
+
     And Click on the element in left nav
       | setupOne      |
       | parameters    |
@@ -36,6 +39,7 @@ Feature: Bank Account functionaliitiy
     And Click on the element in the Dialog
       | saveButton |
     And Success message should be displayed
+
   Scenario: Delete Bank Account
 
     And Click on the element in left nav

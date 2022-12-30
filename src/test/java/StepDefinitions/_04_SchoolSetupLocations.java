@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
@@ -10,6 +11,8 @@ public class _04_SchoolSetupLocations {
     DialogContent dc = new DialogContent();
 
     LeftNav ln = new LeftNav();
+
+    Parent parent=new Parent();
 
 
 
@@ -44,6 +47,8 @@ public class _04_SchoolSetupLocations {
 
     @When("User delete School Setup Locations")
     public void userDeleteSchoolSetupLocations() {
-        dc.findAndDelete2();
+        dc.findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
+        parent.waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
+        dc.findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
     }
 }

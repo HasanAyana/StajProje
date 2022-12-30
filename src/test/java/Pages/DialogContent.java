@@ -159,31 +159,5 @@ public class DialogContent extends Parent{
         findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
 
     }
-    public void findAndDeleteDepartments(String searchText) {
-        LeftNav lv=new LeftNav();
-        lv.findAndClick("Dashboard");
-        lv.findAndClick("setupOne");
-        lv.findAndClick("schoolSetup");
-        lv.findAndClick("Departments");
-        Parent p = new Parent();
-        p.waitUntilLoading();
-        waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
-        findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
-        findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
 
-    }  public void findAndDeleteGradeLevel(String searchText) {
-        LeftNav lv=new LeftNav();
-        lv.findAndClick("bankAccount");
-        lv.findAndClick("GradeLevels");
-        Parent p = new Parent();
-        p.waitUntilLoading();
-        findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
-        findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
-
-    }
-    public void findAndDelete2(){
-        findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
-        waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
-        findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
-    }
 }
