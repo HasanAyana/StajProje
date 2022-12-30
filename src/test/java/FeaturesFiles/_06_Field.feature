@@ -1,4 +1,4 @@
-Feature: Datatable Functionality
+Feature: Field Feature
 
   Background:
     Given Naviagate to Campus

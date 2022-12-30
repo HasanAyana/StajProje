@@ -1,17 +1,19 @@
-Feature: School Setup Locations
+Feature: Locations Feature
 
   Background:
     Given Naviagate to Campus
     When Enter username and password and click Login button
     Then User should login successfuly
     And Naviagate to Locations under School Setup
+
   @Regression
-    Scenario: Locations
-      When User create new locaiton
-      Then Success message should be displayed
+  Scenario: Locations
+    When User create new locaiton
+    Then Success message should be displayed
 
-      When User edit in School Setup Locations
-      Then Success message should be displayed
+    When User edit in School Setup Locations
+    Then Success message should be displayed
 
-      When User delete School Setup Locations
-      Then Success message should be displayed
+    When User delete School Setup Locations
+    Then Success message should be displayed
+

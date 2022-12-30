@@ -5,7 +5,7 @@ Feature: Departments Feature
     When Enter username and password and click Login button
     Then User should login successfuly
     And Naviagate to Departments Categories
-
+  @Regression
   Scenario Outline:Create Name in Departments Categories with Outline
     When User add "<name>","<code>" in Departments Categories
     Then Success message should be displayed
@@ -22,4 +22,5 @@ Feature: Departments Feature
     Examples:
       | name |  | EditName |  | code |
       | AAAa |  | AliW     |  | 78956132  |
+
 

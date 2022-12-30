@@ -4,7 +4,7 @@ Feature: Bank Account functionaliitiy
     Given Naviagate to Campus
     When Enter username and password and click Login button
     Then User should login successfuly
-
+  @Regression
   Scenario: Add Bank Account and save
 
     And Click on the element in left nav

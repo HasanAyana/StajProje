@@ -10,7 +10,7 @@ public class _04_SchoolSetupLocations {
 
     DialogContent dc = new DialogContent();
 
-    LeftNav ln = new LeftNav();
+    LeftNav lv = new LeftNav();
 
     Parent parent=new Parent();
 
@@ -18,9 +18,9 @@ public class _04_SchoolSetupLocations {
 
     @And("Naviagate to Locations under School Setup")
     public void naviagateToLocationsUnderSchoolSetup() {
-        ln.findAndClick("setupOne");
-        ln.findAndClick("schoolSetup");
-        ln.findAndClick("locations");
+        lv.findAndClick("setupOne");
+        lv.findAndClick("schoolSetup");
+        lv.findAndClick("locations");
     }
 
     @When("User create new locaiton")
@@ -47,8 +47,17 @@ public class _04_SchoolSetupLocations {
 
     @When("User delete School Setup Locations")
     public void userDeleteSchoolSetupLocations() {
+        lv.findAndClick("Dashboard");
+        lv.findAndClick("setupOne");
+        lv.findAndClick("schoolSetup");
+        lv.findAndClick("locations");
+        Parent p = new Parent();
+        p.waitUntilLoading();
         dc.findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
-        parent.waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
         dc.findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
+
+       /* dc.findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
+        //parent.waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
+        dc.findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas*/
     }
 }
