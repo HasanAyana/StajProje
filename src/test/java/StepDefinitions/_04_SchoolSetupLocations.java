@@ -30,12 +30,20 @@ public class _04_SchoolSetupLocations {
         dc.findAndSend("capasityInput","1");
         dc.findAndClick("toggleBar");
         dc.findAndClick("saveButton");
-
-
     }
 
-    @When("User delete item from Dialog")
-    public void userDeleteItemFromDialog() {
+    @When("User edit in School Setup Locations")
+    public void userEditInSchoolSetupLocations() {
+        dc.findAndClick("editButton");
+        dc.findAndSend("nameInput","1Amar");
+        dc.findAndSend("shortNameInput","1boncuk");
+        dc.findAndSend("capasityInput","2");
+        dc.findAndClick("toggleBar");
+        dc.findAndClick("saveButton");
+    }
+
+    @When("User delete School Setup Locations")
+    public void userDeleteSchoolSetupLocations() {
         dc.findAndDelete2();
     }
 }

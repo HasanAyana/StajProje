@@ -10,6 +10,8 @@ Feature: School Setup Locations
       When User create new locaiton
       Then Success message should be displayed
 
-      When User delete item from Dialog
+      When User edit in School Setup Locations
       Then Success message should be displayed
 
+      When User delete School Setup Locations
+      Then Success message should be displayed

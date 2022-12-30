@@ -11,11 +11,14 @@ Feature: Position Categories
       When User add "<name>" in Position Categories
       Then Success message should be displayed
 
-      When User delete the "<name>"
+      When User edit "<EditName>" in Position Categories
+      Then Success message should be displayed
+
+      When User delete the "<EditName>" Position Categories
       Then Success message should be displayed
 
       Examples:
-        | name  |
-        | omer1 |
-        | omer2 |
+        | name  | | EditName |
+        | omer1 | | omer3    |
+
 
