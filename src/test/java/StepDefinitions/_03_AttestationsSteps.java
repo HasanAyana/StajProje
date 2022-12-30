@@ -35,4 +35,9 @@ public class _03_AttestationsSteps {
         dc.findAndSend("nameInput",editName);
         dc.findAndClick("saveButton");
     }
+
+    @When("User delete the {string}")
+    public void userDeleteThe(String arg0) {
+        dc.findAndDelete(arg0);
+    }
 }

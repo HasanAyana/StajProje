@@ -44,6 +44,11 @@ public class _10_GradeLevelSteps {
 
     @When("User delete the {string}Grade level")
     public void userDeleteTheGradeLevel(String name) {
-        dc.findAndDeleteGradeLevel(name);
+        lv.findAndClick("bankAccount");
+        lv.findAndClick("GradeLevels");
+        Parent p = new Parent();
+        p.waitUntilLoading();
+        dc.findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
+        dc.findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
     }
 }

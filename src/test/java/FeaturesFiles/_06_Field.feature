@@ -12,7 +12,7 @@ Feature: Datatable Functionality
       | fields |
 
     And Click on the element in the Dialog
-      | addButton2 |
+      | addButton |
 
     And User sending the keys in Dialog content
       | nameInput | karhan25 |

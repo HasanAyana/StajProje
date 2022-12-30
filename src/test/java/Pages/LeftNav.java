@@ -25,7 +25,7 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Attestations'])[1]") // Ali
     private WebElement Attestations;
 
-    @FindBy(xpath="(//span[text()='Bank Accounts'])")
+    @FindBy(xpath="(//span[text()='Fields'])")
     private WebElement fields; //kamala
 
     @FindBy(xpath="(//span[text()='Setup'])[1]")  //kamala
@@ -48,7 +48,7 @@ public class LeftNav extends Parent{
     private WebElement documentTypes;
 
     @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")
-    private WebElement bankAccount;
+    private WebElement bankAccount; //hasan
     @FindBy(xpath="//span[text()='Dashboard ']")
     private WebElement Dashboard;
 
