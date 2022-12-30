@@ -32,7 +32,7 @@ public class DialogContent extends Parent{
     @FindBy(css = "button[class='consent-give']")
     private WebElement acceptCookies;
 
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button") // omerr
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'.ADD')]//button") // omerr
     private WebElement addButton; // ortak Locator
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input") // omer
@@ -75,10 +75,6 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     private WebElement codeInput;
 
-
-    @FindBy(xpath = "//ms-add-button['tooltip=GENERAL.BUTTON.ADD']//button")
-    private WebElement addButton2;    //kamala
-
     @FindBy(xpath = "(//ms-edit-button[@table='true']/button)[1]")
     private WebElement editButton; // Ali edit button
     @FindBy(xpath = "//dynamic-view/div")
@@ -96,19 +92,6 @@ public class DialogContent extends Parent{
     private WebElement currency;
     @FindBy(xpath = "//span[text()=' TRY ']") //hasan
     private WebElement trySelect;
-
-
-
-
-// Deneme
-
-
-
-
-
-
-
-
 
 
     WebElement myElement;
@@ -145,7 +128,6 @@ public class DialogContent extends Parent{
             case "locationsTypes" : myElement=locationsTypes;break;
             case "otherTypes" : myElement=otherTypes;break;
             case "toggleBar" : myElement=toggleBar;break;
-            case "addButton2" : myElement=addButton2;break;
             case "editButton" : myElement=editButton;break;
             case "stageSelect": myElement = stageSelect;break; //hasan
             case "stageStudentSelect": myElement = stageStudentSelect;break; //hasan
