@@ -93,6 +93,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[text()=' TRY ']") //hasan
     private WebElement trySelect;
 
+    @FindBy(xpath = "//*[contains(text(),'Omer')]//following::ms-delete-button") //Omer ozel
+    private WebElement deleteButtonOmer;
+
+    @FindBy(xpath = "//*[contains(text(),'Omer2')]//following::ms-delete-button") //Omer ozel
+    private WebElement deleteButtonOmer2;
+
 
     WebElement myElement;
 
@@ -133,6 +139,9 @@ public class DialogContent extends Parent{
             case "stageStudentSelect": myElement = stageStudentSelect;break; //hasan
             case "currency": myElement = currency;break; //hasan
             case "trySelect": myElement = trySelect;break; //hasan
+            case "deleteButtonOmer" : myElement=deleteButtonOmer;break;
+            case "deleteButtonOmer2" : myElement=deleteButtonOmer2;break;
+
 
 
         }
@@ -157,7 +166,5 @@ public class DialogContent extends Parent{
 
         findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
         findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
-
     }
-
 }
