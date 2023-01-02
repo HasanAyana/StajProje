@@ -5,7 +5,7 @@ Feature: Attestations Feature
     When Enter username and password and click Login button
     Then User should login successfuly
     And Naviagate to Attestations Categories
-
+  @Regression
   Scenario Outline:Create Name in Attestations Categories with Outline
     When User add "<name>" in Attestations Categories
     Then Success message should be displayed
