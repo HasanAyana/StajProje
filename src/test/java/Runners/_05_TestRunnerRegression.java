@@ -12,5 +12,5 @@ import io.cucumber.testng.CucumberOptions;
 
 )
 public class _05_TestRunnerRegression extends AbstractTestNGCucumberTests {
-
+// deneme
 }
