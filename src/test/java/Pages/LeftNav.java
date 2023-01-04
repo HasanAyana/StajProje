@@ -52,6 +52,8 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//span[text()='Dashboard ']")
     private WebElement Dashboard;
 
+    @FindBy(xpath="(//span[text()='Discounts'])[1]")
+    private WebElement discounts; // Samet
 
 
 
@@ -76,6 +78,7 @@ public class LeftNav extends Parent{
             case "documentTypes" : myElement=documentTypes;break;
             case "bankAccount" : myElement=bankAccount;break;
             case "Dashboard" : myElement=Dashboard;break;
+            case "discounts" : myElement=discounts;break;
 
         }
         clickFunction(myElement);

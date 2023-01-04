@@ -99,6 +99,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//*[contains(text(),'Omer2')]//following::ms-delete-button") //Omer ozel
     private WebElement deleteButtonOmer2;
 
+    @FindBy(css = "[formcontrolname='description']>input")
+    private WebElement description; // Samet
+    @FindBy(css = "[formcontrolname='priority']>input")
+    private WebElement priority; // Samet
+    @FindBy(css = "input[data-placeholder='Description']")
+    private WebElement searchDescription; // Samet
 
     WebElement myElement;
 
@@ -115,6 +121,9 @@ public class DialogContent extends Parent{
             case "orderInput" : myElement=orderInput;break;
             case "ibanInput" : myElement=ibanInput;break;
             case "integrationCode" : myElement=integrationCode;break;
+            case "description" : myElement=description;break;
+            case "priority" : myElement=priority;break;
+            case "searchDescription" : myElement=searchDescription;break;
 
 
         }
@@ -160,6 +169,23 @@ public class DialogContent extends Parent{
     }
     public void findAndDelete(String searchText) {
         findAndSend("searchInput", searchText);  // aranacak kelimeyi kutucuğa gönder
+        findAndClick("searchButton"); // arama butonuna bas
+
+        waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
+
+        findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
+        findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
+    }
+
+    /* Bu bolumu ekleme sebebim, bazi durumlarda searchInput kullanilamiyor(Ornek discounts bolumu)
+        eger metodu bu sekilde kullanirsak daha faydali olacagini dusunuyorum. Ama tabi bunun icin
+        kodlari ufak bir revize etmek gerekiyor. searchPlace yerine arama yapmak istedigimiz konumu
+        girerek oradaki urunu silmemizi sagliyor. Boylelikle iki ayri method olmasina gerek kalmayacaktir.
+        Ama kodlariniz halihazirda calisyor ve ugrasmak istemiyorsaniz bu sekilde devam edebiliriz :)
+        Samet
+    */
+    public void findAndDeleteByPlace(String searchPlace, String searchText) {
+        findAndSend(searchPlace, searchText);  // arama yeri ve aranacak kelime
         findAndClick("searchButton"); // arama butonuna bas
 
         waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
