@@ -176,21 +176,4 @@ public class DialogContent extends Parent{
         findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
         findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
     }
-
-    /* Bu bolumu ekleme sebebim, bazi durumlarda searchInput kullanilamiyor(Ornek discounts bolumu)
-        eger metodu bu sekilde kullanirsak daha faydali olacagini dusunuyorum. Ama tabi bunun icin
-        kodlari ufak bir revize etmek gerekiyor. searchPlace yerine arama yapmak istedigimiz konumu
-        girerek oradaki urunu silmemizi sagliyor. Boylelikle iki ayri method olmasina gerek kalmayacaktir.
-        Ama kodlariniz halihazirda calisyor ve ugrasmak istemiyorsaniz bu sekilde devam edebiliriz :)
-        Samet
-    */
-    public void findAndDeleteByPlace(String searchPlace, String searchText) {
-        findAndSend(searchPlace, searchText);  // arama yeri ve aranacak kelime
-        findAndClick("searchButton"); // arama butonuna bas
-
-        waitUntilLoading(); // progressbar ın çocukları 0 olana kadar bekle
-
-        findAndClick("deleteButton"); // silme butonua bas, çöp kutusu
-        findAndClick("deleteDialogButton"); // dilogdaki silme butonuna bas
-    }
 }
